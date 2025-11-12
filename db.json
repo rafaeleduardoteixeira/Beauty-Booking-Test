@@ -1,0 +1,44 @@
+{
+  "bookings": [],
+  "services": [
+    {
+      "id": 1,
+      "name": "Haircut",
+      "duration": 30,
+      "price": 50
+    },
+    {
+      "id": 2,
+      "name": "Hair Coloring",
+      "duration": 120,
+      "price": 120
+    },
+    {
+      "id": 3,
+      "name": "Manicure",
+      "duration": 60,
+      "price": 35
+    },
+    {
+      "id": 4,
+      "name": "Pedicure",
+      "duration": 45,
+      "price": 40
+    },
+    {
+      "id": 5,
+      "name": "Facial",
+      "duration": 90,
+      "price": 80
+    }
+  ],
+  "workingHours": {
+    "monday": { "open": 9, "close": 19 },
+    "tuesday": { "open": 9, "close": 19 },
+    "wednesday": { "open": 9, "close": 19 },
+    "thursday": { "open": 9, "close": 19 },
+    "friday": { "open": 9, "close": 19 },
+    "saturday": { "open": 10, "close": 16 },
+    "sunday": { "open": 0, "close": 0 }
+  }
+}

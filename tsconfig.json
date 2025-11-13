@@ -20,12 +20,6 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@components": [
-        "./src/components"
-      ],
       "@components/*": [
         "./src/components/*"
       ],
@@ -37,6 +31,9 @@
       ],
       "@types": [
         "./types"
+      ],
+      "@types/*": [
+        "./types/*"
       ]
     },
     "plugins": [

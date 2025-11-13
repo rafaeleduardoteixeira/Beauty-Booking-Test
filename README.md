@@ -38,6 +38,25 @@ npm run dev
 npm run server
 ```
 
-### Initial commit
+### About IA 
+I've been using IA as a tool of developement for almost 2 years, since of Cursor beggining. 
+I used Windsurf AI to create this project. I asked to create a project using the latest version of Next.js, TypeScript, and Tailwind CSS. I then asked to make some changes to the project, and Windsurf AI helped me to make those changes, like DB.json, Eslint, Prettier, and some other files.**
 
-I created a simple project created by Windsurf AI, and I asked to create a project using the latest version of Next.js, TypeScript, and Tailwind CSS. I then asked to make some changes to the project, and Windsurf AI helped me to make those changes, like DB.json, Eslint, Prettier, and some other files.
+### Structure
+The DB structure includes:
+- **Companies**: White label configurations (primaryColor, secondaryColor, tertiaryColor, logo) and company details;
+- **Users**: Customers who can book services from any company in the system;
+- **Professionals**: Employees linked to companies who perform services;
+- **Services**: Services offered by each company;
+- **ProfessionalServices**: Junction table linking professionals to the services they can perform (many-to-many);
+- **ProfessionalAvailability**: Time slots defining when each professional is available to work;
+- **Bookings**: Appointments linking users, companies, services, and professionals;
+- **WorkingHours**: Operating hours for each company by day of week;
+- **Promotions**: Promotions and discounts for services;
+
+### Architecture
+About architecture of frontend, it's based on Atomic Design principles combined with Feature-Based Architecture and Clean Code practices.
+
+### Design
+On home screen I create a good user experience, with a beautiful UI and a good navigation experience. I allow user to search for services, and see promotions and services available.
+

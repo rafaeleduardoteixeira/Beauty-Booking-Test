@@ -2,7 +2,7 @@
 
 import { Spinner, ServiceCard } from '@components';
 import { useCompany } from '@features/company/hooks/useCompany';
-import { useCardList } from '../hooks/useCardList';
+import { useCardList } from '@features/card-list/hooks/useCardList';
 import { useRouter, useSearchParams } from 'next/navigation';
 
 export const CardListContainer = () => {

@@ -1,11 +1,8 @@
 import type { InputHTMLAttributes } from 'react';
+import { IInputProps } from './types';
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
-  label?: string;
-  error?: string;
-}
 
-export function Input({ label, error, className = '', ...rest }: InputProps) {
+export function Input({ label, error, className = '', ...rest }: IInputProps) {
   return (
     <label className="flex flex-col gap-1 text-sm text-slate-600">
       {label ? <span>{label}{rest.required ? <span className="text-red-500">*</span> : null}</span> : null}

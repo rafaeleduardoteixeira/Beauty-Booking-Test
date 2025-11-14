@@ -3,8 +3,8 @@
 import { useMemo } from 'react';
 import { DayPicker } from 'react-day-picker';
 import 'react-day-picker/dist/style.css';
-import type { ProfessionalAvailability } from '@types';
 import { useBookingCalendar } from './hooks/useBookingCalendar';
+import { IBookingCalendarProps } from './types';
 
 const dayPickerClassNames = {
   root: 'rdp text-slate-400 min-w-[300px] flex align-center justify-center py-2',
@@ -15,21 +15,13 @@ const dayPickerClassNames = {
   disabled: 'text-slate-300 opacity-50',
 };
 
-interface BookingCalendarProps {
-  availability: ProfessionalAvailability[];
-  selectedDate?: Date;
-  onSelectDate: (value: Date | undefined) => void;
-  selectedTime: string;
-  onSelectTime: (value: string) => void;
-}
-
 export const BookingCalendar = ({
   availability,
   selectedDate,
   onSelectDate,
   selectedTime,
   onSelectTime,
-}: BookingCalendarProps) => {
+}: IBookingCalendarProps) => {
   const { today, availableDateSet, isDateAvailable, timeSlots } = useBookingCalendar(availability, selectedDate);
   const availableDates = useMemo(
     () => Array.from(availableDateSet).map((value) => new Date(value)),

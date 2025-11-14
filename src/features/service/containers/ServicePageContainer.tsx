@@ -2,13 +2,12 @@
 
 import { Spinner } from '@components';
 import { ServiceBookingContainer } from '@features/booking';
-import { useServicePage } from '../hooks/useServicePage';
+import { useServicePage } from '@features/service/hooks/useServicePage';
+import { IServicePageContainerProps } from '@features/service/containers/types';
 
-interface ServicePageContainerProps {
-  serviceId: string;
-}
 
-export const ServicePageContainer = ({ serviceId }: ServicePageContainerProps) => {
+
+export const ServicePageContainer = ({ serviceId }: IServicePageContainerProps) => {
   const { service, loading, error } = useServicePage(serviceId);
 
   if (loading) {

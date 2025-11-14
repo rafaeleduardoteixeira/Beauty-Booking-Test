@@ -3,7 +3,7 @@
 import { createContext, useCallback, useContext, useMemo, useState, useEffect } from 'react';
 import type { ReactNode } from 'react';
 import type { Company } from '@types';
-import { fetchCompanyConfig } from '../services/company.service';
+import { fetchCompanyConfig } from '@features/company/services/company.service';
 
 interface CompanyContextValue {
   slug: string;

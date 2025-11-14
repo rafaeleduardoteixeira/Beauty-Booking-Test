@@ -1,6 +1,5 @@
 'use client';
 
-import { FormEvent } from 'react';
 import { Button, Select, Input } from '@components';
 import { useBookingForm } from './hooks/useBookingForm';
 import { IBookingFormProps } from './types';

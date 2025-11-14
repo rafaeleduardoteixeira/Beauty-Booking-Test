@@ -1,10 +1,8 @@
 import { ServicePageContainer } from '@features/service';
+import { IServicePageProps } from './types';
 
-interface ServicePageProps {
-  params: Promise<{ slug: string; serviceId: string }>;
-}
 
- const ServicePage = async ({ params }: ServicePageProps) => {
+ const ServicePage = async ({ params }: IServicePageProps) => {
   const { serviceId } = await params;
   
   return <ServicePageContainer serviceId={serviceId} />;

@@ -4,14 +4,12 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { Spinner } from '@components';
 import { useCompany } from '@features/company/hooks/useCompany';
-import type { Service } from '@types';
 import { BookingForm } from '@features/booking/components/BookingForm/index';
+import { IServiceBookingContainerProps } from './types';
 
-interface ServiceBookingContainerProps {
-  service: Service;
-}
 
-export const ServiceBookingContainer = ({ service }: ServiceBookingContainerProps) => {
+
+export const ServiceBookingContainer = ({ service }: IServiceBookingContainerProps) => {
   const { company, loading: companyLoading } = useCompany();
   const router = useRouter();
 

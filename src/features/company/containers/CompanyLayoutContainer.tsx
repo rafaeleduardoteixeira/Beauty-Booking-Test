@@ -1,10 +1,10 @@
 'use client';
 
+import type { ReactNode } from 'react';
 import { useCallback } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { Header, Spinner } from '@components';
-import { useCompany } from '../hooks/useCompany';
-import type { ReactNode } from 'react';
+import { useCompany } from '@features/company/hooks/useCompany';
 
 interface CompanyLayoutContainerProps {
   children: ReactNode;

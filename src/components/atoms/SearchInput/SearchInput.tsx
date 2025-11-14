@@ -1,8 +1,8 @@
 'use client';
 
-import { SearchIcon } from '@components/atoms/Icons';
-import type { ChangeEvent, KeyboardEvent } from 'react';
 import { useEffect, useState } from 'react';
+import type { ChangeEvent, KeyboardEvent } from 'react';
+import { SearchIcon } from '@components/atoms/Icons';
 import { ISearchInputProps } from './types';
 
 export const SearchInput = ({

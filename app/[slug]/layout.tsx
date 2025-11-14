@@ -1,12 +1,15 @@
-import type { ReactNode } from 'react';
 import { CompanyProvider } from '@features/company/context/CompanyProvider';
+import { CompanyLayoutContainer } from '@features/company/containers';
+import { ILayoutProps } from './types';
 
-interface CompanyLayoutProps {
-  children: ReactNode;
-  params: Promise<{ slug: string }>;
-}
-
-export default async function CompanyLayout({ children, params }: CompanyLayoutProps) {
+const Layout = async ({ children, params }: ILayoutProps) => {
   const { slug } = await params;
-  return <CompanyProvider slug={slug}>{children}</CompanyProvider>;
+  
+  return (
+    <CompanyProvider slug={slug}>
+      <CompanyLayoutContainer>{children}</CompanyLayoutContainer>
+    </CompanyProvider>
+  );
 }
+
+export default Layout;

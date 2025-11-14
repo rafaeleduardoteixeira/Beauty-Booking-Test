@@ -1,5 +1,5 @@
 import { useCompanyContext } from '../context/CompanyProvider';
 
-export function useCompany() {
+export const useCompany = () => {
   return useCompanyContext();
 }

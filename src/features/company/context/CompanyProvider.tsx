@@ -20,7 +20,7 @@ interface CompanyProviderProps {
   children: ReactNode;
 }
 
-export function CompanyProvider({ slug, children }: CompanyProviderProps) {
+export const CompanyProvider = ({ slug, children }: CompanyProviderProps) => {
   const [company, setCompany] = useState<Company | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -68,7 +68,7 @@ export function CompanyProvider({ slug, children }: CompanyProviderProps) {
   return <CompanyContext.Provider value={value}>{children}</CompanyContext.Provider>;
 }
 
-export function useCompanyContext() {
+export const useCompanyContext = () => {
   const context = useContext(CompanyContext);
   if (!context) {
     throw new Error('useCompanyContext must be used within a CompanyProvider');

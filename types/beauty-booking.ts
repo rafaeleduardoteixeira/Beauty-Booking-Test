@@ -76,6 +76,7 @@ export interface ProfessionalAvailability {
   startTime: string;
   endTime: string;
   isAvailable: boolean;
+  bookedDates?: Record<string, string[]>;
 }
 
 export interface WorkingHours {
@@ -90,7 +91,8 @@ export interface WorkingHours {
 export interface Booking {
   id: number;
   companyId: number;
-  userId: number;
+  name: string;
+  email: string;
   serviceId: number;
   professionalId: number;
   date: string;

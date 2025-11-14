@@ -2,14 +2,14 @@
   "companies": [
     {
       "id": 1,
-      "name": "Beauty Salon Demo",
-      "slug": "beauty-salon-demo",
+      "name": "Tony and Guy",
+      "slug": "tony-and-guy",
       "primaryColor": "#FF6B9D",
       "secondaryColor": "#C44569",
       "tertiaryColor": "#FFC3A0",
-      "logo": "https://via.placeholder.com/200x80?text=Beauty+Salon",
+      "logo": "https://logo.clearbit.com/toniandguy.com",
       "description": "Premium beauty and wellness services",
-      "email": "contact@beautysalon.com",
+      "email": "contact@tonyandguy.com",
       "phone": "+1234567890",
       "address": "123 Beauty Street, City",
       "createdAt": "2024-01-01T00:00:00.000Z",
@@ -17,12 +17,12 @@
     },
     {
       "id": 2,
-      "name": "Spa Wellness Center",
-      "slug": "spa-wellness-center",
+      "name": "Exhale Spa",
+      "slug": "exhale-spa",
       "primaryColor": "#4A90E2",
       "secondaryColor": "#357ABD",
       "tertiaryColor": "#A8D5FF",
-      "logo": "https://via.placeholder.com/200x80?text=Spa+Wellness",
+      "logo": "https://logo.clearbit.com/exhalespa.com",
       "description": "Relaxation and rejuvenation services",
       "email": "info@spawellness.com",
       "phone": "+0987654321",
@@ -217,16 +217,16 @@
     },
     {
       "id": 7,
-      "professionalId": 1,
-      "dayOfWeek": "sunday",
-      "startTime": "00:00",
-      "endTime": "00:00",
-      "isAvailable": false
+      "professionalId": 2,
+      "dayOfWeek": "monday",
+      "startTime": "10:00",
+      "endTime": "18:00",
+      "isAvailable": true
     },
     {
       "id": 8,
       "professionalId": 2,
-      "dayOfWeek": "monday",
+      "dayOfWeek": "tuesday",
       "startTime": "10:00",
       "endTime": "18:00",
       "isAvailable": true
@@ -234,7 +234,7 @@
     {
       "id": 9,
       "professionalId": 2,
-      "dayOfWeek": "tuesday",
+      "dayOfWeek": "wednesday",
       "startTime": "10:00",
       "endTime": "18:00",
       "isAvailable": true
@@ -242,7 +242,7 @@
     {
       "id": 10,
       "professionalId": 2,
-      "dayOfWeek": "wednesday",
+      "dayOfWeek": "thursday",
       "startTime": "10:00",
       "endTime": "18:00",
       "isAvailable": true
@@ -250,7 +250,7 @@
     {
       "id": 11,
       "professionalId": 2,
-      "dayOfWeek": "thursday",
+      "dayOfWeek": "friday",
       "startTime": "10:00",
       "endTime": "18:00",
       "isAvailable": true
@@ -258,31 +258,31 @@
     {
       "id": 12,
       "professionalId": 2,
-      "dayOfWeek": "friday",
-      "startTime": "10:00",
-      "endTime": "18:00",
-      "isAvailable": true
-    },
-    {
-      "id": 13,
-      "professionalId": 2,
       "dayOfWeek": "saturday",
       "startTime": "10:00",
       "endTime": "16:00",
       "isAvailable": true
     },
     {
+      "id": 13,
+      "professionalId": 3,
+      "dayOfWeek": "monday",
+      "startTime": "09:00",
+      "endTime": "19:00",
+      "isAvailable": true
+    },
+    {
       "id": 14,
-      "professionalId": 2,
-      "dayOfWeek": "sunday",
-      "startTime": "00:00",
-      "endTime": "00:00",
-      "isAvailable": false
+      "professionalId": 3,
+      "dayOfWeek": "tuesday",
+      "startTime": "09:00",
+      "endTime": "19:00",
+      "isAvailable": true
     },
     {
       "id": 15,
       "professionalId": 3,
-      "dayOfWeek": "monday",
+      "dayOfWeek": "wednesday",
       "startTime": "09:00",
       "endTime": "19:00",
       "isAvailable": true
@@ -290,7 +290,7 @@
     {
       "id": 16,
       "professionalId": 3,
-      "dayOfWeek": "tuesday",
+      "dayOfWeek": "thursday",
       "startTime": "09:00",
       "endTime": "19:00",
       "isAvailable": true
@@ -298,7 +298,7 @@
     {
       "id": 17,
       "professionalId": 3,
-      "dayOfWeek": "wednesday",
+      "dayOfWeek": "friday",
       "startTime": "09:00",
       "endTime": "19:00",
       "isAvailable": true
@@ -306,39 +306,39 @@
     {
       "id": 18,
       "professionalId": 3,
-      "dayOfWeek": "thursday",
-      "startTime": "09:00",
-      "endTime": "19:00",
-      "isAvailable": true
-    },
-    {
-      "id": 19,
-      "professionalId": 3,
-      "dayOfWeek": "friday",
-      "startTime": "09:00",
-      "endTime": "19:00",
-      "isAvailable": true
-    },
-    {
-      "id": 20,
-      "professionalId": 3,
       "dayOfWeek": "saturday",
       "startTime": "00:00",
       "endTime": "00:00",
       "isAvailable": false
     },
     {
+      "id": 19,
+      "professionalId": 4,
+      "dayOfWeek": "monday",
+      "startTime": "08:00",
+      "endTime": "16:00",
+      "isAvailable": true
+    },
+    {
+      "id": 20,
+      "professionalId": 4,
+      "dayOfWeek": "tuesday",
+      "startTime": "08:00",
+      "endTime": "16:00",
+      "isAvailable": true
+    },
+    {
       "id": 21,
-      "professionalId": 3,
-      "dayOfWeek": "sunday",
-      "startTime": "00:00",
-      "endTime": "00:00",
-      "isAvailable": false
+      "professionalId": 4,
+      "dayOfWeek": "wednesday",
+      "startTime": "08:00",
+      "endTime": "16:00",
+      "isAvailable": true
     },
     {
       "id": 22,
       "professionalId": 4,
-      "dayOfWeek": "monday",
+      "dayOfWeek": "thursday",
       "startTime": "08:00",
       "endTime": "16:00",
       "isAvailable": true
@@ -346,7 +346,7 @@
     {
       "id": 23,
       "professionalId": 4,
-      "dayOfWeek": "tuesday",
+      "dayOfWeek": "friday",
       "startTime": "08:00",
       "endTime": "16:00",
       "isAvailable": true
@@ -354,45 +354,13 @@
     {
       "id": 24,
       "professionalId": 4,
-      "dayOfWeek": "wednesday",
-      "startTime": "08:00",
-      "endTime": "16:00",
-      "isAvailable": true
-    },
-    {
-      "id": 25,
-      "professionalId": 4,
-      "dayOfWeek": "thursday",
-      "startTime": "08:00",
-      "endTime": "16:00",
-      "isAvailable": true
-    },
-    {
-      "id": 26,
-      "professionalId": 4,
-      "dayOfWeek": "friday",
-      "startTime": "08:00",
-      "endTime": "16:00",
-      "isAvailable": true
-    },
-    {
-      "id": 27,
-      "professionalId": 4,
       "dayOfWeek": "saturday",
       "startTime": "09:00",
       "endTime": "13:00",
       "isAvailable": true
     },
     {
-      "id": 28,
-      "professionalId": 4,
-      "dayOfWeek": "sunday",
-      "startTime": "10:00",
-      "endTime": "14:00",
-      "isAvailable": true
-    },
-    {
-      "id": 29,
+      "id": 25,
       "professionalId": 5,
       "dayOfWeek": "monday",
       "startTime": "12:00",
@@ -400,7 +368,7 @@
       "isAvailable": true
     },
     {
-      "id": 30,
+      "id": 26,
       "professionalId": 5,
       "dayOfWeek": "tuesday",
       "startTime": "12:00",
@@ -408,7 +376,7 @@
       "isAvailable": true
     },
     {
-      "id": 31,
+      "id": 26,
       "professionalId": 5,
       "dayOfWeek": "wednesday",
       "startTime": "12:00",
@@ -416,7 +384,7 @@
       "isAvailable": true
     },
     {
-      "id": 32,
+      "id": 27,
       "professionalId": 5,
       "dayOfWeek": "thursday",
       "startTime": "12:00",
@@ -424,7 +392,7 @@
       "isAvailable": true
     },
     {
-      "id": 33,
+      "id": 28,
       "professionalId": 5,
       "dayOfWeek": "friday",
       "startTime": "12:00",
@@ -432,7 +400,7 @@
       "isAvailable": true
     },
     {
-      "id": 34,
+      "id": 29,
       "professionalId": 5,
       "dayOfWeek": "saturday",
       "startTime": "09:00",
@@ -440,7 +408,7 @@
       "isAvailable": true
     },
     {
-      "id": 35,
+      "id": 30,
       "professionalId": 5,
       "dayOfWeek": "sunday",
       "startTime": "10:00",
@@ -512,7 +480,7 @@
       "description": "Deep cleansing facial treatment",
       "duration": 90,
       "price": 80,
-      "rating": 5.0,
+      "rating": 5,
       "reviewCount": 203,
       "image": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80",
       "active": true,
@@ -564,43 +532,17 @@
   ],
   "bookings": [
     {
-      "id": 1,
-      "companyId": 1,
-      "userId": 1,
-      "serviceId": 1,
+      "name": "Rafael Teixeira",
+      "email": "rafaeleduardoteixeira@gmail.com",
       "professionalId": 1,
-      "date": "2024-03-15",
-      "time": "10:00",
-      "status": "confirmed",
-      "notes": "First time customer",
-      "createdAt": "2024-03-01T10:30:00.000Z",
-      "updatedAt": "2024-03-01T10:30:00.000Z"
-    },
-    {
-      "id": 2,
+      "date": "2025-11-14",
+      "time": "09:00",
       "companyId": 1,
-      "userId": 2,
-      "serviceId": 5,
-      "professionalId": 3,
-      "date": "2024-03-16",
-      "time": "14:00",
-      "status": "confirmed",
-      "notes": "Sensitive skin",
-      "createdAt": "2024-03-02T09:15:00.000Z",
-      "updatedAt": "2024-03-02T09:15:00.000Z"
-    },
-    {
-      "id": 3,
-      "companyId": 2,
-      "userId": 3,
-      "serviceId": 6,
-      "professionalId": 4,
-      "date": "2024-03-17",
-      "time": "11:00",
+      "serviceId": 2,
       "status": "pending",
-      "notes": "",
-      "createdAt": "2024-03-03T08:45:00.000Z",
-      "updatedAt": "2024-03-03T08:45:00.000Z"
+      "createdAt": "2025-11-14T11:23:42.429Z",
+      "updatedAt": "2025-11-14T11:23:42.429Z",
+      "id": 1
     }
   ],
   "workingHours": [

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "NODE_TLS_REJECT_UNAUTHORIZED=0 next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -13,12 +13,14 @@
     "type-check": "tsc --noEmit",
     "check": "npm run format:check && npm run lint && npm run type-check",
     "server": "json-server --watch db.json --port 3001",
-    "dev:all": "concurrently \"npm run dev\" \"npm run server\""
+    "dev:all": "NODE_TLS_REJECT_UNAUTHORIZED=0 concurrently \"npm run dev\" \"npm run server\""
   },
   "dependencies": {
     "next": "^15.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-day-picker": "^9.11.1",
+    "react-dom": "^18.2.0",
+    "react-toastify": "^11.0.5"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",

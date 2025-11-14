@@ -18,7 +18,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: #f9fafb; /* Tailwind gray-50 */
+  background: #fff; /* Tailwind gray-50 */
 }
 
 @layer utilities {

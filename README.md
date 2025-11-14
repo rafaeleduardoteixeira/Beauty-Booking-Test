@@ -17,10 +17,10 @@ It's test to arionkoder.com. I need to build a modern beauty salon booking appli
     beauty-booking-test-api-production.up.railway.app/
 
 ### Next.js
-    beauty-booking-test-efdycqmsh-rafael-eduardo-teixeiras-projects.vercel.app
+    beauty-booking-test.vercel.app
 
 ### Access a real test
-    beauty-booking-test-efdycqmsh-rafael-eduardo-teixeiras-projects.vercel.app/tony-and-guy
+    beauty-booking-test.vercel.app/tony-and-guy
 
 ## Getting Started
 

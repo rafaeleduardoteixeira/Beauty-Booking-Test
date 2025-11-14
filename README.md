@@ -11,6 +11,17 @@ It's test to arionkoder.com. I need to build a modern beauty salon booking appli
 - ✨ ESLint + Prettier for code quality
 - 🔧 VS Code integration with format on save
 
+## Servers
+
+### JSON Server
+    beauty-booking-test-api-production.up.railway.app/
+
+### Next.js
+    beauty-booking-test-efdycqmsh-rafael-eduardo-teixeiras-projects.vercel.app
+
+### Access a real test
+    beauty-booking-test-efdycqmsh-rafael-eduardo-teixeiras-projects.vercel.app/ony-and-guy
+
 ## Getting Started
 
 ### Install Dependencies
@@ -19,22 +30,33 @@ It's test to arionkoder.com. I need to build a modern beauty salon booking appli
 npm install
 ```
 
-### Run Development Server
+### Environment Setup
 
-Start both Next.js and JSON Server:
+Create a `.env` file in the root directory (copy from `.env.example`):
 
 ```bash
-npm run dev:all
+cp .env.example .env
 ```
 
-Or run them separately:
+Update the `NEXT_PUBLIC_API_BASE_URL` variable:
+- **Local development**: `http://localhost:3001`
+- **Production**: Your deployed API URL (e.g., `https://beauty-booking-test-api-production.up.railway.app`)
+
+### API Server Setup
+
+Before running the Next.js project, you need to set up the API server:
 
 ```bash
-# Terminal 1 - Next.js (port 3000)
-npm run dev
+git clone git@github.com:rafaeleduardoteixeira/Beauty-Booking-Test-API.git
+cd Beauty-Booking-Test-API
+npm install
+npm start
+```
 
-# Terminal 2 - JSON Server (port 3001)
-npm run server
+### Run Next.js Development Server
+
+```bash
+npm run dev
 ```
 
 ### About IA 

@@ -1,8 +1,9 @@
 'use client';
 
 import type { ReactNode } from 'react';
-import { useCallback } from 'react';
+import { useCallback, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
+import { notFound } from 'next/navigation';
 import { Header, Spinner } from '@components';
 import { useCompany } from '@features/company/hooks/useCompany';
 
@@ -29,6 +30,12 @@ export const CompanyLayoutContainer = ({ children }: CompanyLayoutContainerProps
     },
     [company?.slug, router, searchParams],
   );
+
+  useEffect(() => {
+    if (!loading && !company) {
+      notFound();
+    }
+  }, [loading, company]);
 
   if (loading){
     return <div className="flex justify-center items-center h-screen"><Spinner/></div>;

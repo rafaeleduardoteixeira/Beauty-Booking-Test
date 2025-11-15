@@ -31,12 +31,17 @@ export function useBookingCalendar(availability: ProfessionalAvailability[], sel
 
   const availableDateSet = useMemo(() => {
     const dates = new Set<string>();
+    const now = new Date();
+    const currentTime = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+    
     for (let offset = 0; offset < 60; offset += 1) {
       const date = new Date(today);
       date.setDate(date.getDate() + offset);
       const dayOfWeek = date
         .toLocaleDateString('en-US', { weekday: 'long' })
         .toLowerCase() as ProfessionalAvailability['dayOfWeek'];
+
+      const isToday = date.toDateString() === now.toDateString();
 
       const hasOpenSlot = availability.some((slot) => {
         if (!slot.isAvailable || slot.dayOfWeek !== dayOfWeek) {
@@ -45,7 +50,15 @@ export function useBookingCalendar(availability: ProfessionalAvailability[], sel
         const dateKey = date.toISOString().split('T')[0];
         const allSlots = generateTimeSlots(slot.startTime, slot.endTime);
         const booked = new Set(slot.bookedDates?.[dateKey] ?? []);
-        return allSlots.some((time) => !booked.has(time));
+        return allSlots.some((time) => {
+          if (booked.has(time)) {
+            return false;
+          }
+          if (isToday && time <= currentTime) {
+            return false;
+          }
+          return true;
+        });
       });
 
       if (hasOpenSlot) {
@@ -72,9 +85,21 @@ export function useBookingCalendar(availability: ProfessionalAvailability[], sel
       matchingSlots.flatMap((slot) => slot.bookedDates?.[dateKey] ?? []),
     );
 
+    const now = new Date();
+    const isToday = selectedDate.toDateString() === now.toDateString();
+    const currentTime = isToday ? `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}` : null;
+
     return matchingSlots
       .flatMap((slot) => generateTimeSlots(slot.startTime, slot.endTime))
-      .filter((time) => !bookedTimes.has(time));
+      .filter((time) => {
+        if (bookedTimes.has(time)) {
+          return false;
+        }
+        if (isToday && currentTime && time <= currentTime) {
+          return false;
+        }
+        return true;
+      });
   }, [availability, selectedDate]);
 
   const isDateAvailable = (date: Date) => availableDateSet.has(date.toDateString());

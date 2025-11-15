@@ -24,40 +24,44 @@ It's test to arionkoder.com. I need to build a modern beauty salon booking appli
 
 ## Getting Started
 
-### Install Dependencies
+
+### API Server Setup
+
+Before running the Next.js project, you need to set up the API server:
+
+Repo: https://github.com/rafaeleduardoteixeira/Beauty-Booking-Test-API
 
 ```bash
+git clone git@github.com:rafaeleduardoteixeira/Beauty-Booking-Test-API.git
+cd Beauty-Booking-Test-API
 npm install
+npm run dev
 ```
+
+### Run Next.js Development Server
+
+Repo: https://github.com/rafaeleduardoteixeira/Beauty-Booking-Test
+
+```bash
+git clone git@github.com:rafaeleduardoteixeira/Beauty-Booking-Test.git
+cd Beauty-Booking-Test-API
+npm install
+npm run dev
+```
+
 
 ### Environment Setup
 
 Create a `.env` file in the root directory (copy from `.env.example`):
 
 ```bash
-cp .env.example .env
+cp .env 
 ```
 
 Update the `NEXT_PUBLIC_API_BASE_URL` variable:
 - **Local development**: `http://localhost:3001`
 - **Production**: Your deployed API URL (e.g., `https://beauty-booking-test-api-production.up.railway.app`)
 
-### API Server Setup
-
-Before running the Next.js project, you need to set up the API server:
-
-```bash
-git clone git@github.com:rafaeleduardoteixeira/Beauty-Booking-Test-API.git
-cd Beauty-Booking-Test-API
-npm install
-npm start
-```
-
-### Run Next.js Development Server
-
-```bash
-npm run dev
-```
 
 ### About IA 
 I've been using IA as a tool of developement for almost 2 years, since of Cursor beggining. 
